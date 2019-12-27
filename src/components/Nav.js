@@ -29,6 +29,9 @@ const NavBarDesktop = styled.nav`
             cursor: pointer;
             padding-right: 20px;
             color: ${props => props.theme.main_header};
+                background:${props => props.theme.main_bg};
+                border: none;
+                outline: none;
             font-size: 22px;
             @media (min-width: 500px){
                 display: none;
@@ -136,6 +139,9 @@ const MobileNavWrapper = styled.div`
             transform: translateX(20px);
             button{
                 color: ${props => props.theme.main_header};
+                background:${props => props.theme.main_bg};
+                border: none;
+                outline: none;
             }
 
             &.clicked{
