@@ -109,7 +109,7 @@ const Hero = styled.div`
 const Header = () => {
 
   const data = useStaticQuery(graphql`
-  query MyQuery {
+  query {
     site {
       siteMetadata {
         mainHeader

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import { graphql, useStaticQuery } from 'gatsby'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
@@ -55,6 +56,17 @@ align-items: center;
 `
 
 const Footer = () => {
+
+    const data = useStaticQuery(graphql`
+    query {
+        site {
+          siteMetadata {
+            author
+          }
+        }
+      }
+    `)
+
     return (
         <FooterWrapper>
             <button onClick={() => scrollTo('#top')} className="up__button">
@@ -64,7 +76,7 @@ const Footer = () => {
                 <p>ArtStudio</p>
                 <p>photography</p>
             </div>
-            <p className='copy'>&#x24B8; Copywright 2019 ArtStudio</p>
+            <p className='copy'>&#x24B8; Copywright 2019 ArtStudio. Author: {data.site.siteMetadata.author}</p>
         </FooterWrapper >
     )
 }
