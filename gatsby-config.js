@@ -7,6 +7,11 @@
 const path = require(`path`)
 
 module.exports = {
+  siteMetadata: {
+    title: 'ArtStudio Photography',
+    author: 'Bartłomiej Sienko',
+    mainHeader: "See the world through my lens"
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import background from '../images/hero2.jpeg'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const HeaderWrapper = styled.header`
 width: 100%;
@@ -107,6 +108,15 @@ const Hero = styled.div`
 
 const Header = () => {
 
+  const data = useStaticQuery(graphql`
+  query MyQuery {
+    site {
+      siteMetadata {
+        mainHeader
+      }
+    }
+  }
+  `)
 
   return (
     <HeaderWrapper id="top">
@@ -116,7 +126,7 @@ const Header = () => {
           <p>ArtStudio</p>
           <p>photography</p>
         </div>
-        <h1>See the world through my lens</h1>
+        <h1>{data.site.siteMetadata.mainHeader}</h1>
         <div className='hero-slogan-small'>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
           <p> Tempora suscipit itaque quia magnam</p>

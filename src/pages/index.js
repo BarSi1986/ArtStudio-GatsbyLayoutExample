@@ -31,9 +31,6 @@ const theme = {
 export default () => (
     <React.Fragment>
         <Helmet>
-            {/* <meta charSet="utf-8" />
-            <meta http-equiv="x-ua-compatible" content="ie=edge" />
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> */}
             <title>ArtStudio photography</title>
             <meta name="description" content="Photography studio, best photos, capture the moments, works with the best people" />
         </Helmet>
