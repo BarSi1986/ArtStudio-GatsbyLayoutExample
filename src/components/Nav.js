@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -180,9 +180,10 @@ const MobileNavWrapper = styled.div`
 
 const Nav = () => {
 
+    const [hidden, setHidden] = useState(false)
+
     const hideMobileNav = () => {
-        const mobileNav = document.querySelector('.mobile__nav__wrapper')
-        mobileNav.classList.toggle('hidden')
+        setHidden(!hidden)
         const header = document.querySelector('#top')
         header.classList.toggle('moved')
         const nav = document.querySelector('.desktop__nav__wrapper')
@@ -220,7 +221,7 @@ const Nav = () => {
                 </button>
             </ul>
 
-            <MobileNavWrapper className="mobile__nav__wrapper">
+            <MobileNavWrapper className={hidden ? "mobile__nav__wrapper hidden" : "mobile__nav__wrapper"}>
                 <Logo>ArtStudio</Logo>
                 <ul style={{ padding: "0", margin: "0" }} className="mobile__nav__wrapper">
                     <li className="mobile__nav__item">
@@ -268,7 +269,7 @@ const Nav = () => {
                     </div>
                 </div>
             </MobileNavWrapper>
-        </NavBarDesktop>
+        </NavBarDesktop >
     )
 }
 
