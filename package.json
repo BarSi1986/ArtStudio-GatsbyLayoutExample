@@ -23,7 +23,7 @@
     "@material-ui/styles": "^4.7.1",
     "babel-plugin-styled-components": "^1.10.6",
     "bootstrap": "^4.4.1",
-    "gatsby": "^2.18.8",
+    "gatsby": "^4.25.7",
     "gatsby-background-image": "^0.9.12",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-react-helmet": "^3.1.18",
